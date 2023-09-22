@@ -45,6 +45,6 @@ public class Student {
     // @orderby("sudent_id desc, cours_name desc)
     @Column(name="course_name") //컬럼명
     private List<String> course = new ArrayList<>();
-
+    //클래스로 가능
 
 }
