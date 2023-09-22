@@ -39,10 +39,10 @@ public class Student {
             joinColumns = @JoinColumn(name="student_id") //외래키
     )
 
-    @OrderColumn
+    //@OrderColumn
     //List 인터페이스에 @OrderColumn을 추가하면 순서가 있는 특수한 컬랙션으로 인식
     // -> DB에 순서 값을 저장해서 조회할 때 사용.
-    // @orderby("sudent_id desc, cours_name desc)
+    @OrderBy("student_id desc, course_name desc")
     @Column(name="course_name") //컬럼명
     private List<String> course = new ArrayList<>();
     //클래스로 가능

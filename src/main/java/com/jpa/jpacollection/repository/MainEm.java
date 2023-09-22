@@ -1,6 +1,7 @@
 package com.jpa.jpacollection.repository;
 
 import com.jpa.jpacollection.entity.Student;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
@@ -9,12 +10,14 @@ import javax.persistence.TypedQuery;
 import java.lang.reflect.Type;
 import java.util.List;
 
+
+@Repository
 public class MainEm {
     @PersistenceContext
     EntityManager em;
 
     @Transactional
-    public  Long insert(Student student) {
+    public Long insert(Student student) {
         em.persist(student);
         return student.getId();
     }
